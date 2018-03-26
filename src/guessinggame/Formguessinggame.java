@@ -115,24 +115,38 @@ public class Formguessinggame extends javax.swing.JFrame {
 
     private void buttontestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttontestActionPerformed
         int num = Integer.parseInt (textnum.getText());
-        if (num == ranNum)
+                
+        if(num == ranNum)
         {
-            labelanswer.setText ("Correct, the number was " + num + ". You are safe, for now.");
-        }
+            labelanswer.setText ("Correct, the number was " + num + ". Yo");
+        } 
         else if (num <= ranNum+4 && num >= ranNum -4)
         {
             labelanswer.setText ("BOILLING!");
         }
-         else if (num  <= ranNum + 50 && num <= ranNum -50)
+        else if (num <= ranNum + 5 && num >= ranNum -5)
+         {
+             labelanswer.setText ("Hot");
+         }
+        else if (num <= ranNum + 10 && num >= ranNum -10)
+         {
+             labelanswer.setText ("warm");
+         }
+         else if (num <= ranNum +15 && num >= ranNum -15)
+         {
+             labelanswer.setText ("cool");
+         }
+         else if (num <= ranNum + 25 && num >= ranNum - 25)
+         {
+             labelanswer.setText ("cold");
+         }
+        else if(num  <= ranNum + 50 && num <= ranNum -50)
                  {
                   labelanswer.setText ("FREEZING");
                  }
-         else if (num <= ranNum + 25 && num >= ranNum - 25)
-         {
-             labelanswer.setText ("Very cold");
-         }
     }//GEN-LAST:event_buttontestActionPerformed
 
+    
     private void textnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textnumActionPerformed
@@ -181,3 +195,5 @@ public class Formguessinggame extends javax.swing.JFrame {
     private javax.swing.JTextField textnum;
     // End of variables declaration//GEN-END:variables
 }
+
+
